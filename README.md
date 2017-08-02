@@ -1,0 +1,1 @@
+This website shows handpicked fishing lodges and log cabins from Alaska

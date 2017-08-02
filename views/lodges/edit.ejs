@@ -1,0 +1,30 @@
+<% include ../partials/header %>
+    <div class="row">
+        <h1 style="text-align: center">Edit <% lodge.name %></h1>
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/lodges/<%= lodge._id %>?_method=PUT" method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="lodge[name]" id="name" value="<%= lodge.name %>" >
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="number" name="lodge[price]" id="price" value="<%=lodge.price%>" min="0.01" step="0.01">
+                </div>
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <input class="form-control" type="text" name="lodge[location]" id="location" value="<%= lodge.location %>">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="lodge[image]" id="image" value="<%= lodge.image %>">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="lodge[description]" id="description" value="<%= lodge.description %>">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+                </div>
+            </form>
+            <a href="/lodges">Go Back</a>
+        </div>
+    </div>
+
+<% include ../partials/footer %>
