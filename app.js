@@ -2,6 +2,7 @@ var express = require("express");
 var app = express();
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
+var cookieParser = require("cookie-parser");
 var Lodge = require("./models/lodges");
 var passport = require("passport");
 var Local = require("passport-local");
