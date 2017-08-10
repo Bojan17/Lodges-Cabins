@@ -16,7 +16,9 @@ var commentRoutes = require("./routes/comments"),
     lodgeRoutes = require("./routes/lodges");
 
 app.locals.moment = require("moment");
-mongoose.connect("mongodb://localhost/lodges2",{useMongoClient: true});
+mongoose.connect(process.env.DATABASEURL,{useMongoClient: true});
+//mongodb://<lodger>:<ak2017>@ds139761.mlab.com:39761/lodges
+
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
